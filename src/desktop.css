@@ -1,0 +1,251 @@
+:root {
+  font-family: "Bebas Neue";
+  line-height: 1.5;
+  font-weight: 400;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*--------------------------*/
+/*--------animations--------*/
+
+/* intro slide left */
+
+/* intro slide right */
+
+/* intro slide up */
+
+/* hover grow */
+
+/*--------------------------*/
+
+.videoBG {
+  position: fixed;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+/* get rid of X axis scrolling */
+/* and static background image */
+body {
+  overflow-x: hidden;
+  background-image: url("assets/BG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Name */
+.introText {
+  text-align: center;
+  gap: 0px;
+  padding: 0px;
+  position: relative;
+  right: 50px;
+  filter: drop-shadow(-10px 10px 4px #0000009e);
+  transition: 0.3s;
+}
+.introText:hover {
+  text-align: center;
+  gap: 0px;
+  padding: 0px;
+  position: relative;
+  right: 50px;
+  filter: drop-shadow(-10px 10px 4px #0000009e);
+  filter: drop-shadow(0px 0px 7px #3afa86);
+}
+.nameLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 50%;
+  position: relative;
+  top: 70px;
+}
+
+/* Website links */
+.linksContainer {
+  display: grid;
+  grid-template-columns: auto;
+  border-top: 5px solid #cab789;
+  border-bottom: 5px solid #cab789;
+  border-left: 2px solid #cab789;
+  border-right: 2px solid #cab789;
+  background-color: #121212;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  right: 50px;
+  filter: drop-shadow(-10px 10px 4px #00000013);
+}
+.icon {
+  position: relative;
+  top: 4px;
+}
+.linksContainer > div {
+  background-color: #252525;
+  margin: auto;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 0px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.linksContainer > div:hover {
+  background-color: #3afa86;
+  margin: auto;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 0px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 7px #7fff30);
+}
+.linkText {
+  color: white;
+}
+.linkText:hover {
+  color: black;
+}
+
+/* video text */
+.videoText {
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-align: right;
+  position: relative;
+  bottom: 2px;
+}
+
+/* Video Div style */
+.video {
+  border-top: 5px solid #cab789;
+  border-bottom: 5px solid #cab789;
+  border-radius: 10px;
+  filter: drop-shadow(-10px 10px 4px #00000013);
+  transition: 0.3s;
+}
+.video:hover {
+  border-top: 5px solid #cab789;
+  border-bottom: 5px solid #cab789;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 7px #3afa86);
+}
+
+/* Button to gallery site */
+.galleryButton {
+  color: white;
+  position: relative;
+  top: 30px;
+  font-size: 25px;
+  margin: auto;
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+  display: grid;
+  background-color: #252525;
+  border-radius: 20px;
+  filter: drop-shadow(0px 5px 4px #3afa86);
+  transition: 0.3s;
+}
+.galleryButton:hover {
+  color: black;
+  position: relative;
+  top: 30px;
+  font-size: 25px;
+  margin: auto;
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+  display: grid;
+  background-color: #3afa86;
+  border-radius: 20px;
+  filter: drop-shadow(0px 0px 7px #7fff30);
+}
+.galleryText {
+  color: white;
+  transition: 0.3s;
+}
+.galleryText:hover {
+  color: black;
+}
+
+/* Separating left from right sides of website */
+.leftScreen {
+  grid-area: left;
+  padding: 10px;
+  position: relative;
+  left: 25px;
+}
+.rightScreen {
+  grid-area: right;
+
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+  right: 25px;
+}
+.leftRight {
+  display: grid;
+  grid-template-areas: "left right";
+  position: relative;
+  bottom: 100px;
+  padding: 5px;
+}
+
+/* If things were on mobile ---
+
+.leftRight {
+  display: grid;
+  grid-template-areas:
+    "left"
+    "right";
+}
+
+---------------------------  */
+
+/* Footer */
+footer {
+  margin: left;
+  width: 100%;
+  position: relative;
+  top: 20px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  background-color: #121212;
+  padding: 20px;
+  border-top: 2px solid #cab789;
+}
+
+/* custom scrollbar style*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3afa86;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2bd692;
+}
