@@ -12,23 +12,67 @@
 /*--------animations--------*/
 
 /* intro slide left */
-
+@keyframes leftSlide {
+  from {
+    opacity: 0%;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 100%;
+    transform: translate(0px);
+  }
+}
 /* intro slide right */
-
+@keyframes rightSlide {
+  from {
+    opacity: 0%;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 100%;
+    transform: translate(0px);
+  }
+}
 /* intro slide up */
-
-/* hover grow */
+@keyframes upSlide {
+  from {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 100%;
+    transform: translate(0px);
+  }
+}
 
 /*--------------------------*/
 
-.videoBG {
-  position: fixed;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: auto;
+/* video background scrolling dots*/
+@media (max-width: 1000px) {
+  .videoBG {
+    position: fixed;
+    z-index: -1;
+    top: auto;
+    left: auto;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    width: auto;
+    height: 100%;
+    transform: scaleX(100%);
+    transform: scaleY(100%);
+  }
+}
+
+@media (min-width: 1000px) {
+  .videoBG {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* get rid of X axis scrolling */
@@ -51,6 +95,8 @@ body {
   right: 50px;
   filter: drop-shadow(-10px 10px 4px #0000009e);
   transition: 0.3s;
+  animation-name: leftSlide;
+  animation-duration: 2s;
 }
 .introText:hover {
   text-align: center;
@@ -69,6 +115,8 @@ body {
   width: 50%;
   position: relative;
   top: 70px;
+  animation-name: rightSlide;
+  animation-duration: 2s;
 }
 
 /* Website links */
@@ -89,6 +137,8 @@ body {
   position: relative;
   right: 50px;
   filter: drop-shadow(-10px 10px 4px #00000013);
+  animation-name: leftSlide;
+  animation-duration: 1.5s;
 }
 .icon {
   position: relative;
@@ -103,6 +153,8 @@ body {
   padding: 0px;
   border-radius: 10px;
   transition: 0.3s;
+  animation-name: upSlide;
+  animation-duration: 2.3s;
 }
 .linksContainer > div:hover {
   background-color: #3afa86;
@@ -113,6 +165,7 @@ body {
   padding: 0px;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 7px #7fff30);
+  transform: scale(1.02);
 }
 .linkText {
   color: white;
@@ -128,6 +181,8 @@ body {
   text-align: right;
   position: relative;
   bottom: 2px;
+  animation-name: rightSlide;
+  animation-duration: 3s;
 }
 
 /* Video Div style */
@@ -137,12 +192,15 @@ body {
   border-radius: 10px;
   filter: drop-shadow(-10px 10px 4px #00000013);
   transition: 0.3s;
+  animation-name: rightSlide;
+  animation-duration: 1s;
 }
 .video:hover {
   border-top: 5px solid #cab789;
   border-bottom: 5px solid #cab789;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 7px #3afa86);
+  transform: scale(1.02);
 }
 
 /* Button to gallery site */
@@ -159,7 +217,11 @@ body {
   background-color: #252525;
   border-radius: 20px;
   filter: drop-shadow(0px 5px 4px #3afa86);
+  transition-property: transform;
+  transition-timing-function: ease-in;
   transition: 0.3s;
+  animation-name: rightSlide;
+  animation-duration: 2.5s;
 }
 .galleryButton:hover {
   color: black;
@@ -174,6 +236,7 @@ body {
   background-color: #3afa86;
   border-radius: 20px;
   filter: drop-shadow(0px 0px 7px #7fff30);
+  transform: translateY(-10px);
 }
 .galleryText {
   color: white;
@@ -200,6 +263,28 @@ body {
   top: 100px;
   right: 25px;
 }
+@media (max-width: 700px) {
+  .leftRight {
+    display: grid;
+    grid-template-areas:
+      "left"
+      "right";
+    position: relative;
+    bottom: 100px;
+    padding: 5px;
+  }
+}
+@media (min-width: 1000px) {
+  .leftRight {
+    display: grid;
+    grid-template-areas: "left right";
+    position: relative;
+    bottom: 100px;
+    padding: 5px;
+  }
+}
+
+/*
 .leftRight {
   display: grid;
   grid-template-areas: "left right";
@@ -207,6 +292,7 @@ body {
   bottom: 100px;
   padding: 5px;
 }
+*/
 
 /* If things were on mobile ---
 
@@ -215,6 +301,9 @@ body {
   grid-template-areas:
     "left"
     "right";
+  position: relative;
+  bottom: 100px;
+  padding: 5px;
 }
 
 ---------------------------  */
@@ -224,6 +313,7 @@ footer {
   margin: left;
   width: 100%;
   position: relative;
+  right: 10px;
   top: 20px;
   font-size: 20px;
   letter-spacing: 4px;
