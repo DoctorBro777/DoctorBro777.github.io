@@ -263,7 +263,7 @@ body {
   top: 100px;
   right: 25px;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .leftRight {
     display: grid;
     grid-template-areas:
